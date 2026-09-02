@@ -3,9 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="./assets/styles/reset.css">
-        <link rel="stylesheet" href="./assets/styles/styles.css">
+        <title>DOM API</title>
+        <link rel="stylesheet" href="./assets/styles/reset.css" />
+        <link rel="stylesheet" href="./assets/styles/styles.css" />
     </head>
-    <body></body>
+    <body>
+        <article class="user-card">
+            <h2 class="user-card__nickname">Nicky</h2>
+            <img
+                src="./assets/images/avatar.png"
+                alt="avatar"
+                class="user-card__avatar"
+            />
+            <div class="user-card__body">
+                <div class="user-card__header">
+                    <div class="user-card__identity">
+                        <p class="user-card__name">Mark Snow</p>
+                        <p class="user-card__occupation">Photographer</p>
+                    </div>
+                    <button class="user-card__like button">Like</button>
+                </div>
+                <div class="user-card__info">
+                    <p class="user-card__birthday">10.05.1999</p>
+                    <p class="user-card__description">
+                        Capture beautiful moments
+                    </p>
+                </div>
+                <div class="user-card__contacts contacts">
+                    <a href="" class="contacts__email"
+                        >photocreator@gmail.com</a
+                    >
+                    <a href="" class="contacts__tel">+38(033)-031-13-31</a>
+                </div>
+                <div class="user-card__profile">
+                    <a href="" class="user-card__project button"></a>
+                    <button
+                        href=""
+                        class="user-card__follow button button--white"
+                    >
+                        Follow +
+                    </button>
+                </div>
+            </div>
+        </article>
+    </body>
 </html>
