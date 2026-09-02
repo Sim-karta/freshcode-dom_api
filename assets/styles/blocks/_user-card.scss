@@ -47,4 +47,9 @@
             font-style: italic;
         }
     }
+
+    &__profile {
+        display: flex;
+        justify-content: space-between;
+    }
 }
