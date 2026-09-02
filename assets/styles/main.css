@@ -26,16 +26,7 @@ body,
 /**
   Прибираємо зовнішні вертикальні відступи потрібним тегам,
  */
-:where(h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl):where([class]) {
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
 
@@ -98,8 +89,8 @@ button {
 html {
   height: 100%;
   /**
-    Налаштування скролбару та скролу
-   */
+   Налаштування скролбару та скролу
+  */
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
 }
@@ -134,13 +125,11 @@ button {
 /**
   Приодимо до єдиного кольору svg-елементи
  */
-:where([fill]:not([fill=none],
-[fill^=url])) {
+:where([fill]:not([fill=none], [fill^=url])) {
   fill: currentColor;
 }
 
-:where([stroke]:not([stroke=none],
-[stroke^=url])) {
+:where([stroke]:not([stroke=none], [stroke^=url])) {
   stroke: currentColor;
 }
 
@@ -170,9 +159,11 @@ svg * {
   }
 }
 :root {
-  --color-dark: #212121;
-  --color-dark-10: #353535;
-  --color-light: #fafafa;
+  --color-dark: #212529;
+  --color-dark-10: #343a40;
+  --color-light: #f8f9fa;
+  --color-gray: #adb5bd;
+  --font-family: Verdana, Tahoma, sans-serif;
 }
 
 body {
@@ -188,8 +179,9 @@ body {
   flex-direction: column;
   background-color: var(--color-dark-10);
   width: 300px;
-  color: var(--color-light);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-gray);
+  font-size: 12px;
+  font-family: var(--font-family);
   padding: 0.5rem;
   border-radius: 1rem;
 }/*# sourceMappingURL=main.css.map */
