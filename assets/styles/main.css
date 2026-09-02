@@ -214,4 +214,9 @@ body {
 }
 .user-card__info-description {
   font-style: italic;
+}
+
+.contacts a {
+  color: inherit;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
