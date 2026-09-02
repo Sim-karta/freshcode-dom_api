@@ -1,0 +1,10 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark-10);
+    width: 300px;
+    color: var(--color-light);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
