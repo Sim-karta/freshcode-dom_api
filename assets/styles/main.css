@@ -164,6 +164,7 @@ svg * {
   --color-light: #f8f9fa;
   --color-gray: #adb5bd;
   --font-family: Verdana, Tahoma, sans-serif;
+  --transition-duration: 0.2s;
 }
 
 body {
@@ -216,7 +217,33 @@ body {
   font-style: italic;
 }
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .contacts a {
   color: inherit;
   text-decoration: none;
+}
+
+.button {
+  padding: 0.5rem;
+  background-color: var(--color-dark);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--color-light);
+  transition-duration: var(--transition-duration);
+}
+.button:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+.button--light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+.button--light:hover {
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }/*# sourceMappingURL=main.css.map */

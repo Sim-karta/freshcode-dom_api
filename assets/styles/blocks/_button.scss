@@ -1,0 +1,23 @@
+.button {
+    padding: 0.5rem;
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+    }
+
+    &--light {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+
+        &:hover {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+        }
+    }
+}
