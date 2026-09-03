@@ -272,6 +272,39 @@ a[class] {
 .user-card__like.is-active {
   color: var(--color-red);
 }
+.user-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+.user-card__info-birthday {
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+.user-card__info-birthday::before {
+  content: "";
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  background: url("../icons/birthday-cake.svg") center/cover no-repeat;
+}
+.user-card__info-birthday::after {
+  content: var(--age);
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 0.8rem;
+  padding: 5px 0.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
 .user-card__info-description {
   font-style: italic;
 }
@@ -302,8 +335,33 @@ a[class] {
 .contacts {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 4px;
 }
 .contacts a:hover {
   color: var(--color-gray-10);
+}
+.contacts__email-show {
+  font-size: 0.5rem;
+  padding: none;
+}
+.contacts__tel {
+  position: relative;
+}
+.contacts__tel::after {
+  content: var(--tel);
+  position: absolute;
+  top: -5px;
+  left: 0;
+  text-align: center;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 0.8rem;
+  padding: 5px 0.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+}
+.contacts__tel-show {
+  font-size: 0.5rem;
+  padding: none;
 }/*# sourceMappingURL=main.css.map */

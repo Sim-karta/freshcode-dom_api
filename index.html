@@ -43,20 +43,44 @@
                     </button>
                 </div>
                 <div class="user-card__info">
-                    <p class="user-card__info-birthday">10.05.1999</p>
+                    <p class="user-card__info-birthday" data-js-user-birthday>
+                        10.05.1999
+                    </p>
                     <p class="user-card__info-description">
                         Capture beautiful moments
                     </p>
                 </div>
                 <div class="user-card__contacts contacts">
-                    <a
-                        href="mailto:photocreator@gmail.com"
-                        class="contacts__email"
-                        >photocreator@gmail.com</a
-                    >
-                    <a href="tel:+380630311331" class="contacts__tel"
-                        >+38(063)-031-13-31</a
-                    >
+                    <div>
+                        <span>Mail:</span>
+                        <a
+                            href="mailto:photocreator@gmail.com"
+                            class="contacts__email visually-hidden"
+                            data-js-user-email
+                            >photocreator@gmail.com</a
+                        >
+                        <button
+                            class="contacts__email-show button"
+                            data-js-user-email-btn
+                        >
+                            ...
+                        </button>
+                    </div>
+                    <div>
+                        <span>Phone:</span>
+                        <a
+                            href="tel:+380630311331"
+                            class="contacts__tel visually-hidden"
+                            data-js-user-tel
+                            >+38(063)-031-13-31</a
+                        >
+                        <button
+                            class="contacts__tel-show button"
+                            data-js-user-tel-btn
+                        >
+                            ...
+                        </button>
+                    </div>
                 </div>
                 <div class="user-card__profile">
                     <a
