@@ -2,7 +2,6 @@ class UserCard {
     selectors = {
         root: "[data-js-user-card]",
         likeBtn: "[data-js-like-btn]",
-        projectsBtn: "[data-js-projects-btn]",
         subscribeBtn: "[data-js-subscribe-btn]",
         subscribeText: "[data-js-subscribe-text]",
         subscribeIcon: "[data-js-subscribe-icon]",
@@ -23,9 +22,6 @@ class UserCard {
         this.likeBtnElement = this.rootElement.querySelector(
             this.selectors.likeBtn,
         );
-        this.projectsBtnElement = this.rootElement.querySelector(
-            this.selectors.projectsBtn,
-        );
         this.subscribeBtnElement = this.rootElement.querySelector(
             this.selectors.subscribeBtn,
         );
@@ -40,10 +36,6 @@ class UserCard {
 
     bindEvents() {
         this.likeBtnElement.addEventListener("click", this.onLikeBtnClick);
-        this.projectsBtnElement.addEventListener(
-            "click",
-            this.onProjectsBtnClick,
-        );
         this.subscribeBtnElement.addEventListener(
             "click",
             this.onSubscribeBtnClick,
@@ -54,10 +46,7 @@ class UserCard {
         this.likeBtnElement.classList.toggle(this.stateClasses.isActive);
     };
 
-    onProjectsBtnClick = (event) => {
-        event.preventDefault();
-        console.log("Перейти у розділ проектів");
-    };
+    
 
     onSubscribeBtnClick = () => {
         const isActive = this.subscribeBtnElement.classList.toggle(

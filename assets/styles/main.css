@@ -312,6 +312,10 @@ a[class] {
   display: flex;
   justify-content: space-between;
 }
+.user-card__links {
+  display: flex;
+  gap: 0.5rem;
+}
 .user-card__projects {
   display: flex;
   align-items: center;
