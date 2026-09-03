@@ -47,13 +47,24 @@ class UserInfo {
 
         if (
             today.getMonth() + 1 < month ||
-            (today.getMonth() + 1 == month && today.getDay() < day)
+            (today.getMonth() + 1 == month && today.getDate() < day)
         ) {
             this.age--;
         }
     }
 
-    bindEvents() {}
+    bindEvents() {
+        this.birthdayElement.addEventListener("mouseenter", () => {
+            this.birthdayElement.style.setProperty(
+                "--age",
+                `"${this.age} років"`,
+            );
+        });
+
+        this.birthdayElement.addEventListener("mouseleave", () => {
+            this.birthdayElement.style.setProperty("--age", ``);
+        });
+    }
 }
 
 export default UserInfo;
