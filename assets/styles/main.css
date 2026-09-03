@@ -341,6 +341,10 @@ a[class] {
 .contacts a:hover {
   color: var(--color-gray-10);
 }
+.contacts__email-show {
+  font-size: 0.5rem;
+  padding: none;
+}
 .contacts__tel {
   position: relative;
 }
@@ -356,4 +360,8 @@ a[class] {
   padding: 5px 0.5rem;
   border-radius: 0.5rem;
   white-space: nowrap;
+}
+.contacts__tel-show {
+  font-size: 0.5rem;
+  padding: none;
 }/*# sourceMappingURL=main.css.map */

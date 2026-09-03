@@ -9,17 +9,19 @@ class UserInfo {
         root: "[data-js-user-card]",
         birthday: "[data-js-user-birthday]",
         email: "[data-js-user-email]",
+        emailBtn: "[data-js-user-email-btn]",
         tel: "[data-js-user-tel]",
+        telBtn: "[data-js-user-tel-btn]",
     };
 
     stateClasses = {
-        isActive: "is-active",
         isHidden: "visually-hidden",
+        isActive: "is-active",
     };
 
     stateText = {
-        isSubscribe: "...",
-        isNotSubscribe: "<",
+        show: "...",
+        hide: "<",
     };
 
     constructor() {
@@ -30,7 +32,13 @@ class UserInfo {
         this.emailElement = this.rootElement.querySelector(
             this.selectors.email,
         );
+        this.emailBtnElement = this.rootElement.querySelector(
+            this.selectors.emailBtn,
+        );
         this.telElement = this.rootElement.querySelector(this.selectors.tel);
+        this.telBtnElement = this.rootElement.querySelector(
+            this.selectors.telBtn,
+        );
         this.bindEvents();
 
         const operatorCode = this.telElement.textContent.trim().slice(4, 7);
@@ -63,6 +71,24 @@ class UserInfo {
 
         this.birthdayElement.addEventListener("mouseleave", () => {
             this.birthdayElement.style.setProperty("--age", ``);
+        });
+
+        this.emailBtnElement.addEventListener("click", () => {
+            this.emailElement.classList.toggle(this.stateClasses.isHidden);
+            this.emailBtnElement.textContent =
+                this.emailBtnElement.classList.toggle(
+                    this.stateClasses.isActive,
+                )
+                    ? this.stateText.hide
+                    : this.stateText.show;
+        });
+
+        this.telBtnElement.addEventListener("click", () => {
+            this.telElement.classList.toggle(this.stateClasses.isHidden);
+            this.telBtnElement.textContent =
+                this.telBtnElement.classList.toggle(this.stateClasses.isActive)
+                    ? this.stateText.hide
+                    : this.stateText.show;
         });
 
         this.telElement.addEventListener("mouseenter", () => {

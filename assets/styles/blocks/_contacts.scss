@@ -10,6 +10,13 @@
         }
     }
 
+    &__email {
+        &-show {
+            font-size: 0.5rem;
+            padding: none;
+        }
+    }
+
     &__tel {
         position: relative;
 
@@ -25,6 +32,11 @@
             padding: 5px 0.5rem;
             border-radius: 0.5rem;
             white-space: nowrap;
+        }
+
+        &-show {
+            font-size: 0.5rem;
+            padding: none;
         }
     }
 }
