@@ -64,6 +64,17 @@ class UserInfo {
         this.birthdayElement.addEventListener("mouseleave", () => {
             this.birthdayElement.style.setProperty("--age", ``);
         });
+
+        this.telElement.addEventListener("mouseenter", () => {
+            this.telElement.style.setProperty(
+                "--tel",
+                `"${this.operator}: ${this.telElement.textContent.trim()}"`,
+            );
+        });
+
+        this.telElement.addEventListener("mouseleave", () => {
+            this.telElement.style.setProperty("--tel", ``);
+        });
     }
 }
 

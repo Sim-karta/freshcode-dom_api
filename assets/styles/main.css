@@ -303,6 +303,7 @@ a[class] {
   padding: 5px 0.5rem;
   border-radius: 0.5rem;
   white-space: nowrap;
+  cursor: pointer;
 }
 .user-card__info-description {
   font-style: italic;
@@ -334,8 +335,25 @@ a[class] {
 .contacts {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 4px;
 }
 .contacts a:hover {
   color: var(--color-gray-10);
+}
+.contacts__tel {
+  position: relative;
+}
+.contacts__tel::after {
+  content: var(--tel);
+  position: absolute;
+  top: -5px;
+  left: 0;
+  text-align: center;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 0.8rem;
+  padding: 5px 0.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
 }/*# sourceMappingURL=main.css.map */

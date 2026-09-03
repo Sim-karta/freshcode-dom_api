@@ -1,11 +1,30 @@
 .contacts {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 4px;
 
     a {
         &:hover {
             color: var(--color-gray-10);
+        }
+    }
+
+    &__tel {
+        position: relative;
+
+        &::after {
+            content: var(--tel);
+            position: absolute;
+            top: -5px;
+            left: 0;
+            text-align: center;
+            background-color: var(--color-dark);
+            color: var(--color-light);
+            font-size: 0.8rem;
+            padding: 5px 0.5rem;
+            border-radius: 0.5rem;
+            white-space: nowrap;
         }
     }
 }
