@@ -32,6 +32,25 @@ class UserInfo {
         );
         this.telElement = this.rootElement.querySelector(this.selectors.tel);
         this.bindEvents();
+
+        const operatorCode = this.telElement.textContent.trim().slice(4, 7);
+        this.operator = Object.entries(operators).find(([, codes]) => {
+            return codes.includes(operatorCode);
+        })[0];
+
+        const birthday = this.birthdayElement.textContent.trim();
+        const [day, month, year] = birthday.split(".").map(Number);
+
+        const today = new Date();
+
+        this.age = today.getFullYear() - year;
+
+        if (
+            today.getMonth() + 1 < month ||
+            (today.getMonth() + 1 == month && today.getDay() < day)
+        ) {
+            this.age--;
+        }
     }
 
     bindEvents() {}
