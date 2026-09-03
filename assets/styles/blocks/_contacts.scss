@@ -1,0 +1,11 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    a {
+        &:hover {
+            color: var(--color-gray-10);
+        }
+    }
+}

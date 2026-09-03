@@ -1,0 +1,72 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark-10);
+    width: 300px;
+    color: var(--color-gray);
+    font-size: 12px;
+    font-family: var(--font-family);
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+
+    &__nickname {
+        font-size: 2rem;
+        text-align: center;
+        color: var(--color-light);
+    }
+
+    &__avatar {
+        padding-block: 5px;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        border-radius: 1.5rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__identity {
+        &-name {
+            color: var(--color-light);
+            font-size: 1.5rem;
+        }
+    }
+
+    &__like {
+        display: flex;
+        align-items: center;
+    }
+
+    &__info {
+        &-description {
+            font-style: italic;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__projects {
+        display: flex;
+        align-items: center;
+    }
+
+    &__follow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2px;
+    }
+}
