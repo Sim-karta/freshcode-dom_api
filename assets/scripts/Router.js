@@ -30,6 +30,9 @@ class Router {
         } else if (button.ariaLabel === "Posts") {
             this.onPostsBtnClick();
         }
+
+        console.log(event.target);
+        console.log(button);
     };
 
     onProjectsBtnClick = () => {
