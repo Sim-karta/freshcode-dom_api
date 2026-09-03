@@ -231,12 +231,26 @@ a[class] {
   color: var(--color-light);
   font-size: 1.5rem;
 }
+.user-card__like {
+  display: flex;
+  align-items: center;
+}
 .user-card__info-description {
   font-style: italic;
 }
 .user-card__profile {
   display: flex;
   justify-content: space-between;
+}
+.user-card__projects {
+  display: flex;
+  align-items: center;
+}
+.user-card__follow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
 }
 
 .contacts {
