@@ -1,7 +1,8 @@
 @use "normalize";
 @use "variables";
+@use "utils";
 @use "globals";
 
+@use "./blocks/button";
 @use "./blocks/user-card";
 @use "./blocks/contacts";
-@use "./blocks/button";

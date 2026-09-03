@@ -45,6 +45,10 @@
     &__like {
         display: flex;
         align-items: center;
+
+        &.is-active {
+            color: var(--color-red);
+        }
     }
 
     &__info {
@@ -67,6 +71,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2px;
+        gap: 5px;
+        padding-inline: 0.8rem;
+
+        &.is-active {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+
+            &:hover {
+                background-color: var(--color-light);
+                color: var(--color-dark);
+            }
+        }
     }
 }

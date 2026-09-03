@@ -164,8 +164,22 @@ svg * {
   --color-light: #f8f9fa;
   --color-gray: #adb5bd;
   --color-gray-10: #ced4da;
+  --color-red: #f54257;
   --font-family: Verdana, Tahoma, sans-serif;
   --transition-duration: 0.2s;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 body {
@@ -191,6 +205,26 @@ a {
 }
 a[class] {
   text-decoration: none;
+}
+
+.button {
+  padding: 0.5rem;
+  background-color: var(--color-dark);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--color-light);
+}
+.button:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+.button--light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+.button--light:hover {
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .user-card {
@@ -235,6 +269,9 @@ a[class] {
   display: flex;
   align-items: center;
 }
+.user-card__like.is-active {
+  color: var(--color-red);
+}
 .user-card__info-description {
   font-style: italic;
 }
@@ -250,7 +287,16 @@ a[class] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2px;
+  gap: 5px;
+  padding-inline: 0.8rem;
+}
+.user-card__follow.is-active {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+.user-card__follow.is-active:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .contacts {
@@ -260,25 +306,4 @@ a[class] {
 }
 .contacts a:hover {
   color: var(--color-gray-10);
-}
-
-.button {
-  padding: 0.5rem;
-  background-color: var(--color-dark);
-  border: none;
-  border-radius: 0.5rem;
-  color: var(--color-light);
-  transition-duration: var(--transition-duration);
-}
-.button:hover {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-}
-.button--light {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-}
-.button--light:hover {
-  background-color: var(--color-dark);
-  color: var(--color-light);
 }/*# sourceMappingURL=main.css.map */
